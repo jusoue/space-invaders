@@ -1,0 +1,19 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CPack.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/CPackComponent.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/FindOpenGL.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/FindPackageMessage.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Modules/GNUInstallDirs.cmake
+C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.26/Templates/CPackConfig.cmake.in
+C:/dev/space_invaders/lib/raylib/cmake/CompileDefinitions.cmake
+C:/dev/space_invaders/lib/raylib/cmake/GlfwImport.cmake
+C:/dev/space_invaders/lib/raylib/cmake/InstallConfigurations.cmake
+C:/dev/space_invaders/lib/raylib/cmake/JoinPaths.cmake
+C:/dev/space_invaders/lib/raylib/cmake/LibraryConfigurations.cmake
+C:/dev/space_invaders/lib/raylib/cmake/LibraryPathToLinkerFlags.cmake
+C:/dev/space_invaders/lib/raylib/cmake/PackConfigurations.cmake
+C:/dev/space_invaders/lib/raylib/cmake/PopulateConfigVariablesLocally.cmake
+C:/dev/space_invaders/lib/raylib/cmake/raylib-config-version.cmake
+C:/dev/space_invaders/lib/raylib/raylib.pc.in
+C:/dev/space_invaders/lib/raylib/src/CMakeLists.txt
