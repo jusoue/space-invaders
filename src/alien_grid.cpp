@@ -13,7 +13,7 @@ AlienGrid::AlienGrid(SpaceInvaders& game)
                 float(x) * Alien::alien_size * 2.0f, 
                 float(y) * Alien::alien_size * 2.0f };
 
-            game.add_gameobject(new Alien(alien_pos));
+            game.addGameObject(new Alien(alien_pos));
         }
     }
 }

@@ -15,11 +15,21 @@ void Projectile::update()
 
     if (isOutOfBounds())
     {
-        scene->destroy_gameobject(this);
+        scene->destroyGameObject(this);
     }
-}
 
-bool Projectile::isOutOfBounds()
-{
-    return position.x < 0 || position.x > GetScreenWidth() || position.y > GetScreenHeight() || position.y < 0;
+    Rectangle projectileRect{ position.x, position.y, size.x, size.y };
+    for (GameObject* game_object : scene->getGameObjects())
+    {
+        if (game_object == this)
+            continue;
+
+        Rectangle objectRect{ game_object->position.x, game_object->position.y, game_object->size.x, game_object->size.y };
+        if (CheckCollisionRecs(projectileRect, objectRect))
+        {
+            game_object->onHitByProjectile();
+            scene->destroyGameObject(this);
+            break;
+        }
+    }
 }

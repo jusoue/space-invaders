@@ -9,11 +9,13 @@ public:
     Projectile(Vector2 position, Vector2 direction);
 
     void update() override;
-    bool isOutOfBounds();
+
+public:
+
+    static constexpr float projectile_size = 10.0f;
 
 private:
 
-    static constexpr float projectile_size = 10.0f;
     static constexpr float projectile_speed = 400.0f;
 
     Vector2 direction{};

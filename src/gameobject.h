@@ -13,6 +13,8 @@ public:
 
     virtual void update() {}
     void draw() const;
+    bool isOutOfBounds() const;
+    virtual void onHitByProjectile() {}
 
 public:
 

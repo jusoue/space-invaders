@@ -11,7 +11,7 @@ SpaceInvaders::SpaceInvaders()
     alien_grid = new AlienGrid(*this);
 
     // Le joueur
-    add_gameobject(new Spaceship());
+    addGameObject(new Spaceship());
 }
 
 SpaceInvaders::~SpaceInvaders()
@@ -47,13 +47,13 @@ void SpaceInvaders::draw() const
         game_object->draw();
 }
 
-void SpaceInvaders::add_gameobject(GameObject* game_object)
+void SpaceInvaders::addGameObject(GameObject* game_object)
 {
     game_objects_to_add.push(game_object);
     game_object->scene = this;
 }
 
-void SpaceInvaders::destroy_gameobject(GameObject* game_object)
+void SpaceInvaders::destroyGameObject(GameObject* game_object)
 {
     game_objects_to_delete.push(game_object);
 }

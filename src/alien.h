@@ -9,6 +9,8 @@ public:
     Alien(Vector2 position);
     ~Alien() override = default;
 
+    void onHitByProjectile() override;
+
 public:
 
     static constexpr float alien_size = 25.0f;

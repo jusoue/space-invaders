@@ -16,8 +16,9 @@ public:
     void update();
     void draw() const;
 
-    void add_gameobject(GameObject* game_object);
-    void destroy_gameobject(GameObject* game_object);
+    void addGameObject(GameObject* game_object);
+    void destroyGameObject(GameObject* game_object);
+    const std::unordered_set<GameObject*>& getGameObjects() const { return game_objects; }
 
 private:
 
