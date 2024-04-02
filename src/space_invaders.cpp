@@ -24,6 +24,19 @@ SpaceInvaders::~SpaceInvaders()
 
 void SpaceInvaders::update()
 {
+    while(!game_objects_to_add.empty())
+    {
+        game_objects.emplace(game_objects_to_add.front());
+        game_objects_to_add.pop();
+    }
+
+    while(!game_objects_to_delete.empty())
+    {
+        game_objects.erase(game_objects_to_delete.front());
+        delete game_objects_to_delete.front();
+        game_objects_to_delete.pop();
+    }
+
     for (GameObject* game_object : game_objects)
         game_object->update();
 }
@@ -36,11 +49,11 @@ void SpaceInvaders::draw() const
 
 void SpaceInvaders::add_gameobject(GameObject* game_object)
 {
-    game_objects.emplace(game_object);
+    game_objects_to_add.push(game_object);
+    game_object->scene = this;
 }
 
 void SpaceInvaders::destroy_gameobject(GameObject* game_object)
 {
-    game_objects.erase(game_object);
-    delete game_object;
+    game_objects_to_delete.push(game_object);
 }

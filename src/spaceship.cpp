@@ -1,4 +1,6 @@
 #include "spaceship.h"
+#include "projectile.h"
+#include "space_invaders.h"
 
 #include "raylib.h"
 #include "raymath.h"
@@ -15,4 +17,10 @@ void Spaceship::update()
     float movement = input * GetFrameTime() * speed;
 
     position = Vector2Add(position, Vector2{ movement, 0.0f });
+
+    if(IsKeyReleased(KEY_SPACE))
+    {
+        Projectile* projectile = new Projectile(position, {0, -1});
+        scene->add_gameobject(projectile);
+    }
 }

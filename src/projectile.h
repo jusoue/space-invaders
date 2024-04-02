@@ -9,6 +9,7 @@ public:
     Projectile(Vector2 position, Vector2 direction);
 
     void update() override;
+    bool isOutOfBounds();
 
 private:
 

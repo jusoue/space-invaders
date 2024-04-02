@@ -2,6 +2,8 @@
 
 #include "raylib.h"
 
+class SpaceInvaders;
+
 class GameObject
 {
 public:
@@ -16,6 +18,7 @@ public:
 
     Vector2 position{};
     Vector2 size{};
+    SpaceInvaders* scene = nullptr;
 
     // TODO: Stocker ici la texture du gameobject
 
