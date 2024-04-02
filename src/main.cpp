@@ -1,12 +1,21 @@
 #include "raylib.h"
 
+#include "space_invaders.h"
+
 int main(int argc, char** argv)
 {
     InitWindow(600, 800, "Space Invaders");
+
+    SpaceInvaders game{};
+
     while (!WindowShouldClose())
     {
         BeginDrawing();
-            ClearBackground(RAYWHITE);
+        ClearBackground(RAYWHITE);
+
+        game.update();
+        game.draw();
+
         EndDrawing();
     }
 

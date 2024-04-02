@@ -1,1 +1,6 @@
+C:\dev\space_invaders\src\alien.cpp;C:\dev\space_invaders\build\space_invaders.dir\Debug\alien.obj
+C:\dev\space_invaders\src\alien_grid.cpp;C:\dev\space_invaders\build\space_invaders.dir\Debug\alien_grid.obj
+C:\dev\space_invaders\src\gameobject.cpp;C:\dev\space_invaders\build\space_invaders.dir\Debug\gameobject.obj
 C:\dev\space_invaders\src\main.cpp;C:\dev\space_invaders\build\space_invaders.dir\Debug\main.obj
+C:\dev\space_invaders\src\space_invaders.cpp;C:\dev\space_invaders\build\space_invaders.dir\Debug\space_invaders.obj
+C:\dev\space_invaders\src\spaceship.cpp;C:\dev\space_invaders\build\space_invaders.dir\Debug\spaceship.obj

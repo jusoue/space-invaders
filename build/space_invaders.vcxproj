@@ -309,7 +309,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="C:\dev\space_invaders\src\alien.cpp" />
+    <ClCompile Include="C:\dev\space_invaders\src\alien_grid.cpp" />
+    <ClCompile Include="C:\dev\space_invaders\src\gameobject.cpp" />
     <ClCompile Include="C:\dev\space_invaders\src\main.cpp" />
+    <ClCompile Include="C:\dev\space_invaders\src\space_invaders.cpp" />
+    <ClCompile Include="C:\dev\space_invaders\src\spaceship.cpp" />
+    <ClCompile Include="C:\dev\space_invaders\src\projectile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\dev\space_invaders\build\ZERO_CHECK.vcxproj">
