@@ -18,6 +18,7 @@ public:
 
     void addGameObject(GameObject* game_object);
     void destroyGameObject(GameObject* game_object);
+    
     const std::unordered_set<GameObject*>& getGameObjects() const { return game_objects; }
 
 private:
@@ -26,5 +27,11 @@ private:
     std::unordered_set<GameObject*> game_objects{};
     std::queue<GameObject*> game_objects_to_add;
     std::queue<GameObject*> game_objects_to_delete;
+
+    bool is_game_over = false;
+    bool is_victory = false;
+
+    void checkGameOver();
+    void drawGameOver() const;
 
 };
