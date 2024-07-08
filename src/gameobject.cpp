@@ -1,14 +1,23 @@
 #include "gameobject.h"
 
-GameObject::GameObject(Vector2 position, Vector2 size)
+GameObject::GameObject(Vector2 position, Vector2 size, const char* texture_path)
     : position(position)
     , size(size)
-{}
+{
+    texture = LoadTexture(texture_path);
+}
 
 void GameObject::draw() const
 {
-    // TODO: Dessiner la texture à la place d'un rect
-    DrawRectangleV(position, size, GREEN);
+    DrawTexturePro
+    (
+        texture, 
+        {0, 0, 11, 11},
+        {position.x, position.y, size.x, size.y},
+        {0, 0},
+        0.0f,
+        WHITE
+    );
 }
 
 bool GameObject::isOutOfBounds() const

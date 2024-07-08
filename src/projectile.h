@@ -6,7 +6,7 @@ class Projectile : public GameObject
 {
 public:
 
-    Projectile(Vector2 position, Vector2 direction);
+    Projectile(Vector2 position, const char* texture_path, Vector2 direction);
 
     void update() override;
 
@@ -17,7 +17,6 @@ public:
 private:
 
     static constexpr float projectile_speed = 400.0f;
-
     Vector2 direction{};
 
 };

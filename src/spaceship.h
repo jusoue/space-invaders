@@ -6,7 +6,7 @@ class Spaceship : public GameObject
 {
 public:
 
-    Spaceship();
+    Spaceship(const char* texture_path);
     ~Spaceship() override = default;
 
     void update() override;

@@ -2,8 +2,8 @@
 #include "raymath.h"
 #include "space_invaders.h"
 
-Projectile::Projectile(Vector2 position, Vector2 direction)
-    : GameObject(position, Vector2{ projectile_size, projectile_size })
+Projectile::Projectile(Vector2 position, const char* texture_path, Vector2 direction)
+    : GameObject(position, Vector2{ projectile_size, projectile_size }, texture_path)
     , direction(direction)
 {
     

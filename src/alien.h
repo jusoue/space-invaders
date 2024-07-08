@@ -8,7 +8,7 @@ class Alien : public GameObject
 {
 public:
 
-    Alien(Vector2 position, AlienGrid* grid);
+    Alien(Vector2 position, Vector2 size, const char* texture_path, AlienGrid* grid);
     ~Alien() override = default;
 
     void onHitByProjectile() override;

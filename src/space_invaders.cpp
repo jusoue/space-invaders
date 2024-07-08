@@ -11,7 +11,7 @@ SpaceInvaders::SpaceInvaders()
     alien_grid = new AlienGrid(*this);
 
     // Le joueur
-    addGameObject(new Spaceship());
+    addGameObject(new Spaceship("../../res/spaceship.png"));
 }
 
 SpaceInvaders::~SpaceInvaders()

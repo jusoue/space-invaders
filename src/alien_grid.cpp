@@ -18,7 +18,7 @@ AlienGrid::AlienGrid(SpaceInvaders& game)
                 float(x) * Alien::alien_size * 2.0f, 
                 float(y) * Alien::alien_size * 2.0f };
 
-            Alien* alien = new Alien(alien_pos, this);
+            Alien* alien = new Alien(alien_pos, {Alien::alien_size, Alien::alien_size}, "../../res/alien.png", this);
             game.addGameObject(alien);
             aliens.push_back(alien);
         }

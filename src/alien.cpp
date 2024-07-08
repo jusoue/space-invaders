@@ -3,7 +3,8 @@
 #include "alien_grid.h"
 #include "space_invaders.h"
 
-Alien::Alien(Vector2 position, AlienGrid* grid) : GameObject(position), grid(grid)
+Alien::Alien(Vector2 position, Vector2 size, const char* texture_path, AlienGrid* grid)
+    : GameObject(position, size, texture_path), grid(grid)
 {
     size = Vector2{ alien_size, alien_size };
 }

@@ -8,7 +8,7 @@ class GameObject
 {
 public:
 
-    GameObject(Vector2 position = {}, Vector2 size = {});
+    GameObject(Vector2 position = {}, Vector2 size = {}, const char* texture_path = "");
     virtual ~GameObject() = default;
 
     virtual void update() {}
@@ -22,6 +22,8 @@ public:
     Vector2 size{};
     SpaceInvaders* scene = nullptr;
 
-    // TODO: Stocker ici la texture du gameobject
+protected:
 
+    Texture2D texture;
+    
 };
