@@ -10,16 +10,18 @@ SpaceInvaders::SpaceInvaders()
 {
     alien_grid = new AlienGrid(*this);
 
-    // Le joueur
-    addGameObject(new Spaceship("../../res/spaceship.png"));
+    // TODO: Ajouter un nouveau vaisseau à la liste de game objects
+    
+
 }
 
 SpaceInvaders::~SpaceInvaders()
 {
     delete alien_grid;
 
-    for (GameObject* game_object : game_objects)
-        delete game_object;
+    // TODO: Supprimer tous les game objects resants dans game_objects
+    
+
 }
 
 void SpaceInvaders::update()
@@ -50,8 +52,9 @@ void SpaceInvaders::update()
 
 void SpaceInvaders::draw() const
 {
-    for (const GameObject* game_object : game_objects)
-        game_object->draw();
+    // TODO: Pour tous les game_objects, appeler draw()
+
+    
 
     if (is_game_over)
     {

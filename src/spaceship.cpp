@@ -23,10 +23,12 @@ void Spaceship::update()
 
     if(IsKeyReleased(KEY_SPACE))
     {
-        // TODO: Ce calcul serait pas mal plus simple si les positions représentaient le centre de chaque objet, au lieu 
-        //       des top-left. Le GameObject pourrait calculer lui-même le Rectangle utilisé pour les tests de collision.
+        // Ce calcul serait pas mal plus simple si les positions représentaient le centre de chaque objet, au lieu 
+        // des top-left. Le GameObject pourrait calculer lui-même le Rectangle utilisé pour les tests de collision.
         Projectile* projectile = new Projectile(Vector2Add(position,
             Vector2{ size.x / 2.0f - Projectile::projectile_size / 2.0f, -Projectile::projectile_size - EPSILON }), "../../res/projectile.png", {0, -1});
-        scene->addGameObject(projectile);
+        
+        // TODO: Ajouter le projectile dans la scene
+        
     }
 }

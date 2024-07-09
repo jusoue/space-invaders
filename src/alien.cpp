@@ -11,7 +11,8 @@ Alien::Alien(Vector2 position, Vector2 size, const char* texture_path, AlienGrid
 
 void Alien::onHitByProjectile()
 {
-    scene->destroyGameObject(this);
+    // TODO: Supprimer cette objet de la scene
+    
     for (int i = 0; i < grid->aliens.size(); i++)
     {
         if (grid->aliens[i] == this)

@@ -10,19 +10,18 @@ AlienGrid::AlienGrid(SpaceInvaders& game)
 {
     int nb_aliens_x = 10;
     int nb_aliens_y = 2;
-    for (int x = 0; x < nb_aliens_x; x++)
-    {
-        for (int y = 0; y < nb_aliens_y; y++)
-        {
-            Vector2 alien_pos{ 
-                float(x) * Alien::alien_size * 2.0f, 
-                float(y) * Alien::alien_size * 2.0f };
 
-            Alien* alien = new Alien(alien_pos, {Alien::alien_size, Alien::alien_size}, "../../res/alien.png", this);
-            game.addGameObject(alien);
-            aliens.push_back(alien);
-        }
-    }
+    // TODO: Créer le bon nombre d'aliens et leur donner des posisions
+    //       sous forme de grille. Ajouter les aliens dans le game puis
+    //       dans le vecteur "aliens".
+    
+
+
+
+
+
+
+
 
     width =  (nb_aliens_x - 1) * Alien::alien_size * 2.0f + Alien::alien_size;
     height = (nb_aliens_y - 1) * Alien::alien_size * 2.0f + Alien::alien_size;
@@ -33,17 +32,22 @@ void AlienGrid::update()
     switch (state) 
     {
     case MovementState::RIGHT:
-        move(1, 0);
-        if (coords.x >= GetRenderWidth() - width)
-            state = MovementState::DOWN;
+        // TODO: Se déplacer à droite puis, si les aliens arrivent au bout,
+        //       aller vers le bas
+
+
+
         break;
     case MovementState::LEFT:
-        move(-1, 0);
-        if (coords.x <= 0.0f)
-            state = MovementState::DOWN;
+        // TODO: Se déplacer à gauche puis, si les aliens arrivent au bout,
+        //       aller vers le bas
+        
+
+
         break;
     case MovementState::DOWN:
-        move(0, 1);
+        // TODO: Se déplacer vers le bas
+        
         left_to_go_down -= 0.1f;
         if (left_to_go_down <= 0.0f)
         {
@@ -62,8 +66,11 @@ void AlienGrid::move(int direction_x, int direction_y)
     
     for (auto alien : aliens) 
     {
-        alien->position = Vector2Add(alien->position, movement);
+        // TODO: Additioner le vecteur de mouvement à la position de l'alien.
+        // Indice: Utilisez la fonction Vector2Add()!
+        
     }
 
-    coords = Vector2Add(coords, movement);
+    // TODO: Additionner le vecteur de mouvement aux coordonnées de la grille
+    
 }
